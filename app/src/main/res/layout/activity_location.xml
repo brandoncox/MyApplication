@@ -1,15 +1,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/fragment"
+    android:name="com.dewey.deweyapp.location.LocationActivityFragment"
+    tools:layout="@layout/fragment_location" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
+
 
     <EditText
         android:id="@+id/edit_latitude"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter the latitude"/>
+
     <EditText
         android:id="@+id/edit_longitude"
         android:layout_width="match_parent"
@@ -22,15 +24,6 @@
         android:onClick="sendMessage"
         android:text="@string/button_send" />
 
-    <TextView
-        android:id="@+id/click_me"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:textSize="30dp"
-        android:text="@string/location_link"
-        android:enabled="true"
-        android:onClick="locationServiceGo" />
-
-
 </LinearLayout>
+
+

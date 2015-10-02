@@ -8,15 +8,29 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import com.dewey.deweyapp.location.LocationActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     public final static String EXTRA_MESSAGE = "com.dewey.deweyapp.MESSAGE";
+    private  String[] options = {"Location Test" };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        /*TextView view =
+        view.setText("View Location Services");
+        view.setLinksClickable(true);
+        setContentView(view);*/
         setContentView(R.layout.activity_main);
 
+
+    }
+
+    public void locationServiceGo(View view){
+        Intent intent = new Intent(this, LocationActivity.class);
+        startActivity(intent);
     }
 
     @Override
@@ -28,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void sendMessage(View view){
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText editText = (EditText) findViewById(R.id.edit_message);
+        EditText editText = (EditText) findViewById(R.id.edit_latitude);
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);

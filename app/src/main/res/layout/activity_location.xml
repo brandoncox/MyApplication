@@ -21,8 +21,16 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="sendMessage"
+        android:onClick="drawMap"
         android:text="@string/button_send" />
+
+    <fragment
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/loc_fragment"
+        android:name="com.dewey.deweyapp.location.LocationActivityFragment"
+        tools:layout="@layout/fragment_location" />
+
 
 </LinearLayout>
 

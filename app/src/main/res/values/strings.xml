@@ -9,4 +9,6 @@
     <string name="action_search">Search</string>
     <string name="title_activity_location">LocationActivity</string>
     <string name="location_link">Test Location</string>
+    <string name="service_link">Test Services</string>
+    <string name="camera_link">Test Camera</string>
 </resources>

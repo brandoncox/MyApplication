@@ -1,19 +1,26 @@
 package com.dewey.deweyapp.location;
 
-import android.support.v7.app.AppCompatActivity;
+
+
+import android.app.Activity;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
+
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
 
 import com.dewey.deweyapp.R;
 
-public class LocationActivity extends AppCompatActivity {
+public class LocationActivity extends Activity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location);
     }
+
 
 
     @Override
@@ -36,5 +43,16 @@ public class LocationActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void drawMap(View view){
+        System.out.println("Inside Draw Map");
+//        Intent intent = getIntent();
+//        intent.putExtra("LONGITUDE", ((EditText) findViewById(R.id.edit_longitude)).getText().toString());
+//        intent.putExtra("LATITUDE", ((EditText) findViewById(R.id.edit_latitude)).getText().toString());
+        FragmentTransaction trans = getFragmentManager().beginTransaction();
+        LocationActivityFragment fragment = new LocationActivityFragment();
+        trans.add(R.id.loc_fragment, fragment).commit();
+
     }
 }

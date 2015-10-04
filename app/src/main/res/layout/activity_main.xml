@@ -5,25 +5,8 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/edit_latitude"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter the latitude"/>
-    <EditText
-        android:id="@+id/edit_longitude"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter the longitude"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="sendMessage"
-        android:text="@string/button_send" />
-
     <TextView
-        android:id="@+id/click_me"
+        android:id="@+id/click_me_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clickable="true"
@@ -32,5 +15,24 @@
         android:enabled="true"
         android:onClick="locationServiceGo" />
 
+    <TextView
+        android:id="@+id/click_me_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:textSize="30dp"
+        android:text="@string/service_link"
+        android:enabled="true"
+        android:onClick="locationServiceGo" />
+
+    <TextView
+        android:id="@+id/click_me_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:textSize="30dp"
+        android:text="@string/camera_link"
+        android:enabled="true"
+        android:onClick="locationServiceGo" />
 
 </LinearLayout>
